@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>{{ .title }}</title>
+    </head>
+
+    <body>
+        <h1>{{ .message }}</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input type="file" name="file" id="file" accept="image/*">
+            <input type="hidden" name="auth" id="auth" value={{ .auth }}>
+            <input type="submit" value="Upload Image" name="submit">
+        </form>
+    </body>
+</html>
